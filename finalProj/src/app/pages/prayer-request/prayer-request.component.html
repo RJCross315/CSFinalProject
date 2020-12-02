@@ -1,24 +1,34 @@
 <p>prayer-request works!</p>
 
 <div class="prayer-specifics">
-    <label>Enter name: 
-      <input type="text">
-      (optional)
-    </label> 
-    <br>
     <span>
-    <label>Prayer Request
-      <input type="radio" name="type">
-    </label>
+        <label>Prayer Request
+            <input type="radio" name="type" value="request">
+        </label>
+        <br>
+        <label>Thanksgiving
+            <input type="radio" name="type" value="thanks"> 
+        </label>
+    </span>
     <br>
-    <label>Thanksgiving
-      <input type="radio" name="type">
-    </label>
-</span>
-<br>
     <label> 
       <input type="text">
     </label>
     <br><br>
     <textarea>Give more details if wanted</textarea>
+    <br>
+    <button>Want to be contacted?</button>
+    <div class="contact-info">
+        <label>Name:
+            <input type="text">
+        </label>
+        <label>Email:
+            <input type="text">
+        </label>
+        <label>Phone Number:
+            <input type="text">
+        </label>
+    </div>
+    <br>
+    <input type="submit">
   </div>
