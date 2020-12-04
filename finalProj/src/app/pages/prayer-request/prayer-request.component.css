@@ -1,5 +1,34 @@
 .submit-form {
-    background-color: lightpink;
+    background-color: purple;
     padding: 10px;
-    margin: 100px;
+    margin-left: 100px;
+    color: white;
+    height: 50vh;
+    width: 50vw;
+}
+
+.radio-choice {
+    border: 4px solid white;
+    background-color: orange;
+    width: 20vw;
+    height: 25vh;
+    position: fixed;
+}
+
+.prayer-box {
+    width: 100%;
+}
+
+.more-details {
+    margin-left: 22vw;
+    width: 28vw;
+}
+
+.expand {
+    width: 100%;
+    height: 18vh;
+}
+
+.contact-info {
+    display: none;
 }
