@@ -1,0 +1,24 @@
+.thanksgiving {
+    background-color: aquamarine;
+}
+.prayer-card {
+    border-radius: 10px;
+}
+
+.prayer {
+    background-color: powderblue;
+}
+
+.verse {
+    background-color: rgb(207, 223, 228);
+    width: 300px;
+}
+
+.prayer-board {
+    margin-left: 380px;
+}
+
+.sidebar {
+    position: fixed;
+    margin-left: 20px;
+}
