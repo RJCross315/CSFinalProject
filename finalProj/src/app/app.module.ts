@@ -7,6 +7,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { PrayerRequestComponent } from './pages/prayer-request/prayer-request.component';
 import { PrayerBoardComponent } from './pages/prayer-board/prayer-board.component';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { firebaseConfig } from 'src/app/credentials.js';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +20,9 @@ import { PrayerBoardComponent } from './pages/prayer-board/prayer-board.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+   AngularFirestoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
