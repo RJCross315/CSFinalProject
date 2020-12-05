@@ -9,7 +9,7 @@ import { PrayerBoardComponent } from './pages/prayer-board/prayer-board.componen
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { firebaseConfig } from 'src/app/credentials.js';
+import { firebaseConfig } from 'finalProj/src/app/credentials.js';
 
 @NgModule({
   declarations: [
