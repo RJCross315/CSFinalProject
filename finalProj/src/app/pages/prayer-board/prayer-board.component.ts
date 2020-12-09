@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-prayer-board',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrayerBoardComponent implements OnInit {
 
-  constructor() { }
+  PrayerDatabase : [{
+    
+  }]
+  constructor(private db: AngularFirestore) {
+    const dbcollection = this.db.collection('/prayTogether', ref => ref.orderBy('timestamp'))
+    dbcollection.valueChanges().subscribe((res: [{ timestamp: Date, message: string, color?: string, }]) => {
+      this.PrayerDatabase = res;
+    })
+  }
 
   ngOnInit(): void {
   }

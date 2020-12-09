@@ -1,37 +1,44 @@
 <div class="submit-form">
     <p>How can we be praying for you?</p>
-    <input type="text" class="prayer-box">
+    <input type="text" class="prayer-box" ngModel="prayer">
     <br><br>
     <div class="radio-choice">
         <p>What kind of request is it?</p>
+
+        <mat-radio-group aria-label="Select type of prayer">
+            <mat-radio-button value="request">Prayer Reqest</mat-radio-button>
+            <mat-radio-button value="thanks">Thanksgiving</mat-radio-button>
+        </mat-radio-group>
+        <!--
         <label>Prayer Request
-            <input type="radio" name="type" value="request">
+            <input type="radio" name="type" value="request" ngModel="radioVal">
         </label>
         <br>
         <label>Thanksgiving  
-            <input type="radio" name="type" value="thanks"> 
+            <input type="radio" name="type" value="thanks" ngModel="radioVal"> 
         </label>
+    -->
         <br><br>
     </div>
     <div class="more-details">
         <p>Give more details if necessary</p>
-        <textarea class="expand"></textarea>
+        <textarea class="expand" ngModel="moreDetails"></textarea>
         <br><br>
     </div>
         <button>Want to be contacted?</button>
         <br><br>
         <div class="contact-info">
             <label>Name:
-                <input type="text">
+                <input type="text" ngModel="name">
             </label>
             <label>Email:
-                <input type="text">
+                <input type="text" ngModel="email">
             </label>
             <label>Phone Number:
-                <input type="text">
+                <input type="text" ngModel="phoneNum">
             </label>
         </div>
     
     <br>
-    <input type="submit">
+    <input type="submit" (click)=addCollection()>
   </div>
