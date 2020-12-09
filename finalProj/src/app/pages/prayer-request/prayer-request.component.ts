@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { FormsModule } from '@angular/forms'
 
 @Component({
   selector: 'app-prayer-request',

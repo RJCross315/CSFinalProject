@@ -5,7 +5,7 @@
     <div class="radio-choice">
         <p>What kind of request is it?</p>
 
-        <mat-radio-group aria-label="Select type of prayer">
+        <mat-radio-group aria-label="Select type of prayer" [(ngModel)]="prayerType">
             <mat-radio-button value="request">Prayer Reqest</mat-radio-button>
             <mat-radio-button value="thanks">Thanksgiving</mat-radio-button>
         </mat-radio-group>

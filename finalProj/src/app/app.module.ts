@@ -8,6 +8,8 @@ import { PrayerRequestComponent } from './pages/prayer-request/prayer-request.co
 import { PrayerBoardComponent } from './pages/prayer-board/prayer-board.component';
 import { firebaseConfig } from './credentials';
 
+import { FormsModule } from '@angular/forms'
+
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,6 +29,7 @@ import { MatRadioModule } from '@angular/material/radio';
     AngularFirestoreModule,
     BrowserAnimationsModule,
     MatRadioModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

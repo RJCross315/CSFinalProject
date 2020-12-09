@@ -8,13 +8,35 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class PrayerBoardComponent implements OnInit {
 
-  PrayerDatabase : [{
-    
+  FirestoreRec_request: [{
+    request: string;
+    more_info?: string;
+    name?: string;
+    phone_num?: number;
+    email?: string;
+    date: Date;
   }]
+
+  FirestoreRec_thanks: [{
+    thanks: string;
+    more_info: string;
+    name: string;
+    phone_num: number;
+    email: string;
+    date: Date;
+  }]
+
   constructor(private db: AngularFirestore) {
-    const dbcollection = this.db.collection('/prayTogether', ref => ref.orderBy('timestamp'))
-    dbcollection.valueChanges().subscribe((res: [{ timestamp: Date, message: string, color?: string, }]) => {
-      this.PrayerDatabase = res;
+    const dbcollection = this.db.collection('/pray-request', ref => ref.orderBy('timestamp'))
+    dbcollection.valueChanges().subscribe((res: [{
+      request: string;
+      more_info?: string;
+      name?: string;
+      phone_num?: number;
+      email?: string;
+      date: Date;
+    }]) => {
+      this.FirestoreRec_request = res;
     })
   }
 
