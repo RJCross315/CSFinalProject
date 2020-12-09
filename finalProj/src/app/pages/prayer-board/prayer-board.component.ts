@@ -19,16 +19,18 @@ export class PrayerBoardComponent implements OnInit {
 
   FirestoreRec_thanks: [{
     thanks: string;
-    more_info: string;
-    name: string;
-    phone_num: number;
-    email: string;
+    more_info?: string;
+    name?: string;
+    phone_num?: number;
+    email?: string;
     date: Date;
   }]
 
-  constructor(private db: AngularFirestore) {
-    const dbcollection = this.db.collection('/pray-request', ref => ref.orderBy('timestamp'))
-    dbcollection.valueChanges().subscribe((res: [{
+  constructor(private db: AngularFirestore) { }
+
+  ngOnInit(): void {
+    const dbcollection_request = this.db.collection('/prayer_requests', ref => ref.orderBy('date'))
+    dbcollection_request.valueChanges().subscribe((res: [{
       request: string;
       more_info?: string;
       name?: string;
@@ -38,9 +40,18 @@ export class PrayerBoardComponent implements OnInit {
     }]) => {
       this.FirestoreRec_request = res;
     })
-  }
 
-  ngOnInit(): void {
+    const dbcollection_thanks = this.db.collection('/thanksgiving', ref => ref.orderBy('date'))
+    dbcollection_thanks.valueChanges().subscribe((res: [{
+      thanks: string;
+      more_info?: string;
+      name?: string;
+      phone_num?: number;
+      email?: string;
+      date: Date;
+    }]) => {
+      this.FirestoreRec_thanks = res;
+    })
   }
 
 }

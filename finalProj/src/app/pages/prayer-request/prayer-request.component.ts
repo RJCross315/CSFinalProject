@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { FormsModule } from '@angular/forms'
 
 @Component({
   selector: 'app-prayer-request',
@@ -18,32 +17,11 @@ export class PrayerRequestComponent implements OnInit {
   phoneNum: number;
   date = new Date();
   prayerType: string;
-  
-  FirestoreRec_request: [{
-    request: string;
-    more_info?: string;
-    name?: string;
-    phone_num?: number;
-    email?: string;
-    date: Date;
-  }]
-
-  FirestoreRec_thanks: [{
-    thanks: string;
-    more_info: string;
-    name: string;
-    phone_num: number;
-    email: string;
-    date: Date;
-  }]
 
   constructor(private db: AngularFirestore) {}
 
   addCollection() {
-    console.log("clicked");
-    console.log(this.prayerType);
     if ( this.prayerType == "request") {
-      console.log("request");
       const dbcollection = this.db.collection('/prayer-request', ref => ref.orderBy('date'));
       dbcollection.add({
         request: this.prayer,
@@ -55,7 +33,6 @@ export class PrayerRequestComponent implements OnInit {
       })
     }
     if ( this.prayerType == "thanks") {
-      console.log("thanks");
       const dbcollection = this.db.collection('/thanksgiving', ref => ref.orderBy('date'));
       dbcollection.add({
         thanks: this.prayer,
