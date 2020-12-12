@@ -15,6 +15,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatRadioModule } from '@angular/material/radio';
 
+//import { CarouselModule, WavesModule } from 'angular-bootstrap-md'
+
 @NgModule({
   declarations: [
     AppComponent,

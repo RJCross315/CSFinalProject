@@ -22,23 +22,24 @@
 </div>
 </div>
 
+<!-- display prayer requests -->
 <div class="prayer-board">
-
     <div class="request prayer-card title">
         <p>Prayer Requests</p>
     </div>
-
-    <div class="prayer-card" *ngFor="let prayer of FirestoreRec_request" class="request prayer-card" (click)="printExtra()">
+    <div class="prayer-card request" *ngFor="let prayer of FirestoreRec_request">
         <p>{{prayer.request}}</p>
+        <p>{{prayer.more_info}}</p>
+        <p [ngClass]="{'hide-details': displayDet}">{{prayer.name}}</p>
     </div>
 </div>
 
+<!-- display prayers of thanksgiving -->
 <div class="thanks-board">
     <div class="prayer-card thanksgiving title">
         <p>Prayers of Thanksgiving</p>
     </div>
-
-    <div class="prayer-card" *ngFor="let prayer of FirestoreRec_thanks" class="thanksgiving prayer-card">
+    <div class="prayer-card thanksgiving" *ngFor="let prayer of FirestoreRec_thanks">
         <p>{{prayer.thanks}}</p>
     </div>
 </div>

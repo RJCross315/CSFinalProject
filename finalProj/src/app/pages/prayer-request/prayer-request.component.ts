@@ -36,6 +36,7 @@ export class PrayerRequestComponent implements OnInit {
         email: this.email,
         date: this.date,
       })
+      window.location.reload();
     }
     if ( this.prayerType == "thanks") {
       const dbcollection = this.db.collection('/thanksgiving', ref => ref.orderBy('date'));
@@ -47,8 +48,12 @@ export class PrayerRequestComponent implements OnInit {
         email: this.email,
         date: this.date,
       })
+      window.location.reload();
     }
-    window.location.reload();
+    else {
+      // warning???
+    }
+    
   }
 
   showContactQ() {
