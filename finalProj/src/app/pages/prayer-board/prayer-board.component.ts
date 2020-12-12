@@ -53,5 +53,4 @@ export class PrayerBoardComponent implements OnInit {
       this.FirestoreRec_thanks = res;
     })
   }
-
 }

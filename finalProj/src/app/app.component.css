@@ -1,0 +1,14 @@
+li {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+li:hover {
+    background-color: rgb(85, 139, 219);
+    color: blue;
+}
+
+.menu-bar {
+    background-color: lightblue;
+}

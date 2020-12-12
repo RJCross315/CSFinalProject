@@ -13,7 +13,9 @@
 
 .verse {
     background-color: rgb(207, 223, 228);
-    width: 30vw;
+    margin-left: 12px;
+    width: 28vw;
+    padding: 10px;
 }
 
 .prayer-board {
@@ -32,6 +34,8 @@
     position: fixed;
     width: 30vw;
     margin-left: 10px;
+    background-color: lightblue;
+    height: 100%;
 }
 
 .title {

@@ -1,4 +1,5 @@
 <div class="sidebar">
+    <br>
     <div class="verse">
     <p>1 Timothy 2:1-6</p>
     <p>I urge, then, first of all, that petitions, prayers, intercession and thanksgiving be made for all people— 
@@ -27,7 +28,7 @@
         <p>Prayer Requests</p>
     </div>
 
-    <div class="prayer-card" *ngFor="let prayer of FirestoreRec_request" class="request prayer-card">
+    <div class="prayer-card" *ngFor="let prayer of FirestoreRec_request" class="request prayer-card" (click)="printExtra()">
         <p>{{prayer.request}}</p>
     </div>
 </div>
