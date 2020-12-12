@@ -15,7 +15,7 @@ export class PrayerRequestComponent implements OnInit {
   name: string;
   email: string;
   phoneNum: number;
-  date = new Date();
+  date: Date;
   prayerType: string;
 
   // Evaluate values to display/hide infomation
@@ -26,6 +26,7 @@ export class PrayerRequestComponent implements OnInit {
   constructor(private db: AngularFirestore) {}
 
   addCollection() {
+    this.date = new Date();
     if ( this.prayerType == "request") {
       const dbcollection = this.db.collection('/prayer_requests', ref => ref.orderBy('date'));
       dbcollection.add({
@@ -36,6 +37,7 @@ export class PrayerRequestComponent implements OnInit {
         email: this.email,
         date: this.date,
       })
+      console.log("Request entered");
       window.location.reload();
     }
     if ( this.prayerType == "thanks") {
@@ -48,10 +50,12 @@ export class PrayerRequestComponent implements OnInit {
         email: this.email,
         date: this.date,
       })
+      console.log("Thanks entered");
       window.location.reload();
     }
     else {
       // warning???
+      console.log("Tried to addCollection");
     }
     
   }

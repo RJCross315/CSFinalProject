@@ -21,11 +21,13 @@
 .prayer-board {
     margin-left: 34vw;
     width: 30vw;
+    position: absolute;
 }
 
 .thanks-board {
     margin-left: 68vw;
     width: 30vw;
+    position: absolute;
 }
 
 .sidebar {
