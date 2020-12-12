@@ -11,5 +11,5 @@ li:hover {
 
 .menu-bar {
     background-color: lightblue;
-    position: fixed;
+    position: sticky;
 }
