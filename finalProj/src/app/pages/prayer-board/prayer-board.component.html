@@ -23,20 +23,21 @@
 
 <div class="prayer-board">
 
-    <div class="request prayer-card">
-        <p>This is another prayer request</p>
+    <div class="request prayer-card title">
+        <p>Prayer Requests</p>
     </div>
 
-    <div class="prayer-card" *ngFor="let prayer of FirestoreRec_request" class="request">
-        {{prayer.request}}
+    <div class="prayer-card" *ngFor="let prayer of FirestoreRec_request" class="request prayer-card">
+        <p>{{prayer.request}}</p>
     </div>
-    
-    <div class="prayer-card thanksgiving">
-        <p>This is my prayer request</p>
+</div>
+
+<div class="thanks-board">
+    <div class="prayer-card thanksgiving title">
+        <p>Prayers of Thanksgiving</p>
     </div>
 
-    <div class="prayer-card" *ngFor="let prayer of FirestoreRec_thanks" class="thanksgiving">
-        {{prayer.thanks}}
+    <div class="prayer-card" *ngFor="let prayer of FirestoreRec_thanks" class="thanksgiving prayer-card">
+        <p>{{prayer.thanks}}</p>
     </div>
-
 </div>

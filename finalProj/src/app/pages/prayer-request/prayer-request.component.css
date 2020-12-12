@@ -11,7 +11,7 @@
     border: 4px solid white;
     background-color: orange;
     width: 20vw;
-    height: 25vh;
+    height: 20vh;
     position: fixed;
 }
 
@@ -29,8 +29,6 @@
     height: 18vh;
 }
 
-/*
-.contact-info {
+.display-contact {
     display: none;
 }
-*/

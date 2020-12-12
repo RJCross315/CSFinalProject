@@ -18,11 +18,16 @@ export class PrayerRequestComponent implements OnInit {
   date = new Date();
   prayerType: string;
 
+  // Evaluate values to display/hide infomation
+  hideContact = true;
+  showButton = false;
+  hideContactButton = false;
+
   constructor(private db: AngularFirestore) {}
 
   addCollection() {
     if ( this.prayerType == "request") {
-      const dbcollection = this.db.collection('/prayer-request', ref => ref.orderBy('date'));
+      const dbcollection = this.db.collection('/prayer_requests', ref => ref.orderBy('date'));
       dbcollection.add({
         request: this.prayer,
         more_info: this.moreDetails,
@@ -43,9 +48,34 @@ export class PrayerRequestComponent implements OnInit {
         date: this.date,
       })
     }
-    
+    window.location.reload();
   }
 
-  ngOnInit(): void {}
+  showContactQ() {
+    this.hideContact = false;
+    this.hideContactButton = true;
+    // this works but may not be the way that we want to activate the submit button.
+    if (this.prayer != "") {
+      this.showButton = true;
+    }
+    else {
+      // display alert to fill in prayer
+    }
+  }
+
+  clickedNo() {
+    this.hideContactButton = true;
+    if (this.prayer != "") {
+      this.showButton = true;
+    }
+    else {
+      // display alert to fill in prayer
+    }
+    this.name = "anonymous";
+    this.email = "NA";
+    this.phoneNum = 0;
+  }
+
+  ngOnInit(): void { }
 
 }

@@ -1,8 +1,10 @@
-.thanksgiving {
-    background-color: aquamarine;
-}
 .prayer-card {
     border-radius: 10px;
+    text-align: center;
+}
+
+.thanksgiving {
+    background-color: aquamarine;
 }
 
 .request {
@@ -11,14 +13,29 @@
 
 .verse {
     background-color: rgb(207, 223, 228);
-    width: 300px;
+    width: 30vw;
 }
 
 .prayer-board {
-    margin-left: 380px;
+    margin-left: 34vw;
+    width: 30vw;
+    position: fixed;
+}
+
+.thanks-board {
+    margin-left: 68vw;
+    width: 30vw;
+    position: fixed;
 }
 
 .sidebar {
     position: fixed;
-    margin-left: 20px;
+    width: 30vw;
+    margin-left: 10px;
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
 }
