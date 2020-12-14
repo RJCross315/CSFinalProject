@@ -1,45 +1,41 @@
-<div class="sidebar">
-    <br>
-    <div class="verse">
-    <p>1 Timothy 2:1-6</p>
-    <p>I urge, then, first of all, that petitions, prayers, intercession and thanksgiving be made for all people— 
-        for kings and all those in authority, that we may live peaceful and quiet lives in all godliness and holiness. 
-        This is good, and pleases God our Savior, who wants all people to be saved and to come to a knowledge of the truth. 
-        For there is one God and one mediator between God and mankind, the man Christ Jesus, who gave himself as a ransom for all people.</p>
-</div>
+<div class="my-body">
+    <div class="container">
+        <div class="another-container">
+            <span class="title">Notice</span>
+            <p class="date">1 Timothy 2:1-6</p>
+            <p>
+                I urge, then, first of all, that petitions, prayers, intercession and thanksgiving be made for all people— 
+                for kings and all those in authority, that we may live peaceful and quiet lives in all godliness and holiness. 
+                This is good, and pleases God our Savior, who wants all people to be saved and to come to a knowledge of the truth. 
+                For there is one God and one mediator between God and mankind, the man Christ Jesus, who gave himself as a ransom for all people.
+            </p>
 
-<div class="verse">
-    <p>Ephesians 6:18</p>
-    <p>And pray in the Spirit on all occasions with all kinds of prayers and requests. With this in mind, be alert and always keep on praying for all the Lord’s people.</p>
-</div>
+            <p class="date">Ephesians 6:18</p>
+            <p>And pray in the Spirit on all occasions with all kinds of prayers and requests. With this in mind, be alert and always keep on praying for all the Lord’s people.</p>
 
-<div class="verse">
-    <p>James 5:12-16</p>
-    <p> Is anyone among you in trouble? Let them pray. Is anyone happy? Let them sing songs of praise. 
-        Is anyone among you sick? Let them call the elders of the church to pray over them and anoint them with oil in the name of the Lord. 
-        And the prayer offered in faith will make the sick person well; the Lord will raise them up. If they have sinned, they will be forgiven. 
-        Therefore confess your sins to each other and pray for each other so that you may be healed. The prayer of a righteous person is powerful and effective.</p>
-</div>
-</div>
+            <p class="date">James 5:12-16</p>
+            <p> Is anyone among you in trouble? Let them pray. Is anyone happy? Let them sing songs of praise. 
+            Is anyone among you sick? Let them call the elders of the church to pray over them and anoint them with oil in the name of the Lord. 
+            And the prayer offered in faith will make the sick person well; the Lord will raise them up. If they have sinned, they will be forgiven. 
+            Therefore confess your sins to each other and pray for each other so that you may be healed. The prayer of a righteous person is powerful and effective.</p>
+        </div>
+        
+        <span class="title m-top request-title">Prayer Requests</span>
+        <div class="card1" *ngFor="let prayer of FirestoreRec_request">
+            <div class="request-sec">
+                <span class="t1">{{prayer.name}}</span>
+                <span class="t2">{{prayer.request}}</span>
+            </div>
+            <div class="c">
+                {{prayer.more_info}}
+            </div>
+        </div>
 
-<!-- display prayer requests -->
-<div class="prayer-board">
-    <div class="request prayer-card title">
-        <p>Prayer Requests</p>
-    </div>
-    <div class="prayer-card request" *ngFor="let prayer of FirestoreRec_request">
-        <p>{{prayer.request}}</p>
-        <p>{{prayer.more_info}}</p>
-        <p [ngClass]="{'hide-details': displayDet}">{{prayer.name}}</p>
-    </div>
-</div>
-
-<!-- display prayers of thanksgiving -->
-<div class="thanks-board">
-    <div class="prayer-card thanksgiving title">
-        <p>Prayers of Thanksgiving</p>
-    </div>
-    <div class="prayer-card thanksgiving" *ngFor="let prayer of FirestoreRec_thanks">
-        <p>{{prayer.thanks}}</p>
+        <span class="title m-top">Prayers of Thanksgiving</span>
+        <div class="card1 thanks-sec" *ngFor="let prayer of FirestoreRec_thanks">
+            <div class="c">
+                {{prayer.thanks}}
+            </div>
+        </div>
     </div>
 </div>

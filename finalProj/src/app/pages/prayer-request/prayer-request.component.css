@@ -1,18 +1,21 @@
 .submit-form {
-    background-color: purple;
+    background-color: #f9f9f9;
     padding: 10px;
-    margin-left: 100px;
-    color: white;
+    /*margin-left: 100px;*/
+    color: #313142;
+    font-weight: 600;
     height: 50vh;
     width: 50vw;
 }
 
 .radio-choice {
-    border: 4px solid white;
-    background-color: orange;
+    /*border: 4px solid white;*/
+    background-color: #E9E9E9;
     width: 20vw;
     height: 20vh;
     position: fixed;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .prayer-box {
@@ -27,8 +30,19 @@
 .expand {
     width: 100%;
     height: 18vh;
+    resize: none;
 }
 
 .display-contact {
     display: none;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.request-radio {
+    margin-bottom: 10px;
 }
